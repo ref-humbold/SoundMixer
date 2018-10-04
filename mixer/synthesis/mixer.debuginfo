@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<EnsembleReport name="mixer" kind="system" version="17.1" fabric="QSYS">
- <!-- Format version 17.1 590 (Future versions may contain additional information.) -->
- <!-- 2018.01.29.11:01:42 -->
+<EnsembleReport name="mixer" kind="system" version="17.0" fabric="QSYS">
+ <!-- Format version 17.0 595 (Future versions may contain additional information.) -->
+ <!-- 2018.10.04.13:18:15 -->
  <!-- A collection of modules and connections -->
  <parameter name="clockCrossingAdapter">
   <type>com.altera.sopcmodel.ensemble.EClockAdapter</type>
@@ -53,7 +53,7 @@
  </parameter>
  <parameter name="generationId">
   <type>int</type>
-  <value>1517220097</value>
+  <value>1538651893</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>true</visible>
@@ -150,7 +150,7 @@
  <module
    name="audio_0"
    kind="altera_up_avalon_audio"
-   version="17.1"
+   version="17.0"
    path="audio_0">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
@@ -222,7 +222,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="clk" kind="clock_sink" version="17.1">
+  <interface name="clk" kind="clock_sink" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -283,7 +283,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="reset" kind="reset_sink" version="17.1">
+  <interface name="reset" kind="reset_sink" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -331,7 +331,7 @@ parameters are a RESULT of the module parameters. -->
   <interface
      name="avalon_left_channel_source"
      kind="avalon_streaming_source"
-     version="17.1">
+     version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -471,7 +471,7 @@ parameters are a RESULT of the module parameters. -->
   <interface
      name="avalon_right_channel_source"
      kind="avalon_streaming_source"
-     version="17.1">
+     version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -611,7 +611,7 @@ parameters are a RESULT of the module parameters. -->
   <interface
      name="avalon_left_channel_sink"
      kind="avalon_streaming_sink"
-     version="17.1">
+     version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -751,7 +751,7 @@ parameters are a RESULT of the module parameters. -->
   <interface
      name="avalon_right_channel_sink"
      kind="avalon_streaming_sink"
-     version="17.1">
+     version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -888,7 +888,7 @@ parameters are a RESULT of the module parameters. -->
     <role>ready</role>
    </port>
   </interface>
-  <interface name="external_interface" kind="conduit_end" version="17.1">
+  <interface name="external_interface" kind="conduit_end" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -961,7 +961,7 @@ parameters are a RESULT of the module parameters. -->
  <module
    name="audio_amplifier_0"
    kind="audio_amplifier"
-   version="1.0"
+   version="1.1"
    path="audio_amplifier_0">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
@@ -981,7 +981,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="clock" kind="clock_sink" version="17.1">
+  <interface name="clock" kind="clock_sink" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -1026,7 +1026,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="reset" kind="reset_sink" version="17.1">
+  <interface name="reset" kind="reset_sink" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -1071,7 +1071,7 @@ parameters are a RESULT of the module parameters. -->
     <role>reset</role>
    </port>
   </interface>
-  <interface name="avalon_left_sink" kind="avalon_streaming_sink" version="17.1">
+  <interface name="avalon_left_sink" kind="avalon_streaming_sink" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -1190,10 +1190,10 @@ parameters are a RESULT of the module parameters. -->
    <type>avalon_streaming</type>
    <isStart>false</isStart>
    <port>
-    <name>avalon_left_sink_data</name>
+    <name>avalon_left_sink_valid</name>
     <direction>Input</direction>
-    <width>24</width>
-    <role>data</role>
+    <width>1</width>
+    <role>valid</role>
    </port>
    <port>
     <name>avalon_left_sink_ready</name>
@@ -1202,13 +1202,13 @@ parameters are a RESULT of the module parameters. -->
     <role>ready</role>
    </port>
    <port>
-    <name>avalon_left_sink_valid</name>
+    <name>avalon_left_sink_data</name>
     <direction>Input</direction>
-    <width>1</width>
-    <role>valid</role>
+    <width>24</width>
+    <role>data</role>
    </port>
   </interface>
-  <interface name="avalon_right_sink" kind="avalon_streaming_sink" version="17.1">
+  <interface name="avalon_right_sink" kind="avalon_streaming_sink" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -1348,7 +1348,7 @@ parameters are a RESULT of the module parameters. -->
   <interface
      name="avalon_left_source"
      kind="avalon_streaming_source"
-     version="17.1">
+     version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -1488,7 +1488,7 @@ parameters are a RESULT of the module parameters. -->
   <interface
      name="avalon_right_source"
      kind="avalon_streaming_source"
-     version="17.1">
+     version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -1607,10 +1607,10 @@ parameters are a RESULT of the module parameters. -->
    <type>avalon_streaming</type>
    <isStart>true</isStart>
    <port>
-    <name>avalon_right_source_data</name>
+    <name>avalon_right_source_valid</name>
     <direction>Output</direction>
-    <width>24</width>
-    <role>data</role>
+    <width>1</width>
+    <role>valid</role>
    </port>
    <port>
     <name>avalon_right_source_ready</name>
@@ -1619,13 +1619,13 @@ parameters are a RESULT of the module parameters. -->
     <role>ready</role>
    </port>
    <port>
-    <name>avalon_right_source_valid</name>
+    <name>avalon_right_source_data</name>
     <direction>Output</direction>
-    <width>1</width>
-    <role>valid</role>
+    <width>24</width>
+    <role>data</role>
    </port>
   </interface>
-  <interface name="key" kind="conduit_end" version="17.1">
+  <interface name="key" kind="conduit_end" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -1670,7 +1670,7 @@ parameters are a RESULT of the module parameters. -->
     <role>key_signal</role>
    </port>
   </interface>
-  <interface name="hex" kind="conduit_end" version="17.1">
+  <interface name="hex" kind="conduit_end" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -1715,7 +1715,7 @@ parameters are a RESULT of the module parameters. -->
     <role>hex_signal</role>
    </port>
   </interface>
-  <interface name="led" kind="conduit_end" version="17.1">
+  <interface name="led" kind="conduit_end" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -1764,7 +1764,7 @@ parameters are a RESULT of the module parameters. -->
  <module
    name="audio_and_video_config_0"
    kind="altera_up_avalon_audio_and_video_config"
-   version="17.1"
+   version="17.0"
    path="audio_and_video_config_0">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
@@ -1932,7 +1932,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="clk" kind="clock_sink" version="17.1">
+  <interface name="clk" kind="clock_sink" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -1993,7 +1993,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="reset" kind="reset_sink" version="17.1">
+  <interface name="reset" kind="reset_sink" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -2038,7 +2038,7 @@ parameters are a RESULT of the module parameters. -->
     <role>reset</role>
    </port>
   </interface>
-  <interface name="avalon_av_config_slave" kind="avalon_slave" version="17.1">
+  <interface name="avalon_av_config_slave" kind="avalon_slave" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -2415,7 +2415,7 @@ parameters are a RESULT of the module parameters. -->
     <role>waitrequest</role>
    </port>
   </interface>
-  <interface name="external_interface" kind="conduit_end" version="17.1">
+  <interface name="external_interface" kind="conduit_end" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -2470,7 +2470,7 @@ parameters are a RESULT of the module parameters. -->
  <module
    name="audio_pll_0"
    kind="altera_up_avalon_audio_pll"
-   version="17.1"
+   version="17.0"
    path="audio_pll_0">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
@@ -2541,7 +2541,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="ref_clk" kind="clock_sink" version="17.1">
+  <interface name="ref_clk" kind="clock_sink" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -2586,7 +2586,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="ref_reset" kind="reset_sink" version="17.1">
+  <interface name="ref_reset" kind="reset_sink" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -2631,7 +2631,7 @@ parameters are a RESULT of the module parameters. -->
     <role>reset</role>
    </port>
   </interface>
-  <interface name="audio_clk" kind="clock_source" version="17.1">
+  <interface name="audio_clk" kind="clock_source" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -2700,7 +2700,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="reset_source" kind="reset_source" version="17.1">
+  <interface name="reset_source" kind="reset_source" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -2762,7 +2762,7 @@ parameters are a RESULT of the module parameters. -->
    </port>
   </interface>
  </module>
- <module name="clk_0" kind="clock_source" version="17.1" path="clk_0">
+ <module name="clk_0" kind="clock_source" version="17.0" path="clk_0">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
   <parameter name="clockFrequency">
@@ -2815,7 +2815,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="clk_in" kind="clock_sink" version="17.1">
+  <interface name="clk_in" kind="clock_sink" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -2880,7 +2880,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="clk_in_reset" kind="reset_sink" version="17.1">
+  <interface name="clk_in_reset" kind="reset_sink" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -2929,7 +2929,7 @@ parameters are a RESULT of the module parameters. -->
     <role>reset_n</role>
    </port>
   </interface>
-  <interface name="clk" kind="clock_source" version="17.1">
+  <interface name="clk" kind="clock_source" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -3058,7 +3058,7 @@ parameters are a RESULT of the module parameters. -->
     <name>rst_controller.clk</name>
    </clockDomainMember>
   </interface>
-  <interface name="clk_reset" kind="reset_source" version="17.1">
+  <interface name="clk_reset" kind="reset_source" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -3123,7 +3123,7 @@ parameters are a RESULT of the module parameters. -->
  <module
    name="delay_effect_0"
    kind="delay_effect"
-   version="1.0"
+   version="1.1"
    path="delay_effect_0">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
@@ -3143,7 +3143,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="clock" kind="clock_sink" version="17.1">
+  <interface name="clock" kind="clock_sink" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -3188,7 +3188,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="reset" kind="reset_sink" version="17.1">
+  <interface name="reset" kind="reset_sink" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -3233,7 +3233,7 @@ parameters are a RESULT of the module parameters. -->
     <role>reset</role>
    </port>
   </interface>
-  <interface name="avalon_left_sink" kind="avalon_streaming_sink" version="17.1">
+  <interface name="avalon_left_sink" kind="avalon_streaming_sink" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -3358,19 +3358,19 @@ parameters are a RESULT of the module parameters. -->
     <role>data</role>
    </port>
    <port>
-    <name>avalon_left_sink_ready</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>ready</role>
-   </port>
-   <port>
     <name>avalon_left_sink_valid</name>
     <direction>Input</direction>
     <width>1</width>
     <role>valid</role>
    </port>
+   <port>
+    <name>avalon_left_sink_ready</name>
+    <direction>Output</direction>
+    <width>1</width>
+    <role>ready</role>
+   </port>
   </interface>
-  <interface name="avalon_right_sink" kind="avalon_streaming_sink" version="17.1">
+  <interface name="avalon_right_sink" kind="avalon_streaming_sink" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -3508,149 +3508,9 @@ parameters are a RESULT of the module parameters. -->
    </port>
   </interface>
   <interface
-     name="avalon_right_source"
-     kind="avalon_streaming_source"
-     version="17.1">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <parameter name="associatedClock">
-    <type>java.lang.String</type>
-    <value>clock</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="associatedReset">
-    <type>java.lang.String</type>
-    <value>reset</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="beatsPerCycle">
-    <type>int</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="dataBitsPerSymbol">
-    <type>int</type>
-    <value>8</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="emptyWithinPacket">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="errorDescriptor">
-    <type>[Ljava.lang.String;</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="firstSymbolInHighOrderBits">
-    <type>boolean</type>
-    <value>true</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="highOrderSymbolAtMSB">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="maxChannel">
-    <type>int</type>
-    <value>0</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="packetDescription">
-    <type>java.lang.String</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="readyLatency">
-    <type>int</type>
-    <value>0</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="symbolsPerBeat">
-    <type>int</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>avalon_streaming</type>
-   <isStart>true</isStart>
-   <port>
-    <name>avalon_right_source_data</name>
-    <direction>Output</direction>
-    <width>24</width>
-    <role>data</role>
-   </port>
-   <port>
-    <name>avalon_right_source_ready</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>ready</role>
-   </port>
-   <port>
-    <name>avalon_right_source_valid</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>valid</role>
-   </port>
-  </interface>
-  <interface
      name="avalon_left_source"
      kind="avalon_streaming_source"
-     version="17.1">
+     version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -3787,7 +3647,147 @@ parameters are a RESULT of the module parameters. -->
     <role>valid</role>
    </port>
   </interface>
-  <interface name="switch" kind="conduit_end" version="17.1">
+  <interface
+     name="avalon_right_source"
+     kind="avalon_streaming_source"
+     version="17.0">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value>clock</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedReset">
+    <type>java.lang.String</type>
+    <value>reset</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="beatsPerCycle">
+    <type>int</type>
+    <value>1</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="dataBitsPerSymbol">
+    <type>int</type>
+    <value>8</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="emptyWithinPacket">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="errorDescriptor">
+    <type>[Ljava.lang.String;</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="firstSymbolInHighOrderBits">
+    <type>boolean</type>
+    <value>true</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="highOrderSymbolAtMSB">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="maxChannel">
+    <type>int</type>
+    <value>0</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="packetDescription">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="readyLatency">
+    <type>int</type>
+    <value>0</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="symbolsPerBeat">
+    <type>int</type>
+    <value>1</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>avalon_streaming</type>
+   <isStart>true</isStart>
+   <port>
+    <name>avalon_right_source_data</name>
+    <direction>Output</direction>
+    <width>24</width>
+    <role>data</role>
+   </port>
+   <port>
+    <name>avalon_right_source_ready</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>ready</role>
+   </port>
+   <port>
+    <name>avalon_right_source_valid</name>
+    <direction>Output</direction>
+    <width>1</width>
+    <role>valid</role>
+   </port>
+  </interface>
+  <interface name="switch" kind="conduit_end" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -3836,7 +3836,7 @@ parameters are a RESULT of the module parameters. -->
  <module
    name="master_0"
    kind="altera_jtag_avalon_master"
-   version="17.1"
+   version="17.0"
    path="master_0">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
@@ -3930,7 +3930,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="clk" kind="clock_sink" version="17.1">
+  <interface name="clk" kind="clock_sink" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -3975,7 +3975,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="clk_reset" kind="reset_sink" version="17.1">
+  <interface name="clk_reset" kind="reset_sink" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -4020,7 +4020,7 @@ parameters are a RESULT of the module parameters. -->
     <role>reset</role>
    </port>
   </interface>
-  <interface name="master" kind="avalon_master" version="17.1">
+  <interface name="master" kind="avalon_master" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -4347,7 +4347,7 @@ parameters are a RESULT of the module parameters. -->
     <span>4294967296</span>
    </memoryBlock>
   </interface>
-  <interface name="master_reset" kind="reset_source" version="17.1">
+  <interface name="master_reset" kind="reset_source" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -4412,7 +4412,7 @@ parameters are a RESULT of the module parameters. -->
  <module
    name="moving_average_filter_0"
    kind="moving_average_filter"
-   version="1.0"
+   version="1.1"
    path="moving_average_filter_0">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
@@ -4432,7 +4432,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="clock" kind="clock_sink" version="17.1">
+  <interface name="clock" kind="clock_sink" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -4477,7 +4477,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="reset" kind="reset_sink" version="17.1">
+  <interface name="reset" kind="reset_sink" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -4522,7 +4522,7 @@ parameters are a RESULT of the module parameters. -->
     <role>reset</role>
    </port>
   </interface>
-  <interface name="avalon_left_sink" kind="avalon_streaming_sink" version="17.1">
+  <interface name="avalon_left_sink" kind="avalon_streaming_sink" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -4641,10 +4641,10 @@ parameters are a RESULT of the module parameters. -->
    <type>avalon_streaming</type>
    <isStart>false</isStart>
    <port>
-    <name>avalon_left_sink_data</name>
+    <name>avalon_left_sink_valid</name>
     <direction>Input</direction>
-    <width>24</width>
-    <role>data</role>
+    <width>1</width>
+    <role>valid</role>
    </port>
    <port>
     <name>avalon_left_sink_ready</name>
@@ -4653,13 +4653,13 @@ parameters are a RESULT of the module parameters. -->
     <role>ready</role>
    </port>
    <port>
-    <name>avalon_left_sink_valid</name>
+    <name>avalon_left_sink_data</name>
     <direction>Input</direction>
-    <width>1</width>
-    <role>valid</role>
+    <width>24</width>
+    <role>data</role>
    </port>
   </interface>
-  <interface name="avalon_right_sink" kind="avalon_streaming_sink" version="17.1">
+  <interface name="avalon_right_sink" kind="avalon_streaming_sink" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -4778,10 +4778,10 @@ parameters are a RESULT of the module parameters. -->
    <type>avalon_streaming</type>
    <isStart>false</isStart>
    <port>
-    <name>avalon_right_sink_data</name>
+    <name>avalon_right_sink_valid</name>
     <direction>Input</direction>
-    <width>24</width>
-    <role>data</role>
+    <width>1</width>
+    <role>valid</role>
    </port>
    <port>
     <name>avalon_right_sink_ready</name>
@@ -4790,156 +4790,16 @@ parameters are a RESULT of the module parameters. -->
     <role>ready</role>
    </port>
    <port>
-    <name>avalon_right_sink_valid</name>
+    <name>avalon_right_sink_data</name>
     <direction>Input</direction>
-    <width>1</width>
-    <role>valid</role>
-   </port>
-  </interface>
-  <interface
-     name="avalon_right_source"
-     kind="avalon_streaming_source"
-     version="17.1">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <parameter name="associatedClock">
-    <type>java.lang.String</type>
-    <value>clock</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="associatedReset">
-    <type>java.lang.String</type>
-    <value>reset</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="beatsPerCycle">
-    <type>int</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="dataBitsPerSymbol">
-    <type>int</type>
-    <value>8</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="emptyWithinPacket">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="errorDescriptor">
-    <type>[Ljava.lang.String;</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="firstSymbolInHighOrderBits">
-    <type>boolean</type>
-    <value>true</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="highOrderSymbolAtMSB">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="maxChannel">
-    <type>int</type>
-    <value>0</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="packetDescription">
-    <type>java.lang.String</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="readyLatency">
-    <type>int</type>
-    <value>0</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="symbolsPerBeat">
-    <type>int</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>avalon_streaming</type>
-   <isStart>true</isStart>
-   <port>
-    <name>avalon_right_source_data</name>
-    <direction>Output</direction>
     <width>24</width>
     <role>data</role>
-   </port>
-   <port>
-    <name>avalon_right_source_ready</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>ready</role>
-   </port>
-   <port>
-    <name>avalon_right_source_valid</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>valid</role>
    </port>
   </interface>
   <interface
      name="avalon_left_source"
      kind="avalon_streaming_source"
-     version="17.1">
+     version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -5058,10 +4918,10 @@ parameters are a RESULT of the module parameters. -->
    <type>avalon_streaming</type>
    <isStart>true</isStart>
    <port>
-    <name>avalon_left_source_data</name>
+    <name>avalon_left_source_valid</name>
     <direction>Output</direction>
-    <width>24</width>
-    <role>data</role>
+    <width>1</width>
+    <role>valid</role>
    </port>
    <port>
     <name>avalon_left_source_ready</name>
@@ -5070,13 +4930,153 @@ parameters are a RESULT of the module parameters. -->
     <role>ready</role>
    </port>
    <port>
-    <name>avalon_left_source_valid</name>
+    <name>avalon_left_source_data</name>
+    <direction>Output</direction>
+    <width>24</width>
+    <role>data</role>
+   </port>
+  </interface>
+  <interface
+     name="avalon_right_source"
+     kind="avalon_streaming_source"
+     version="17.0">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value>clock</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedReset">
+    <type>java.lang.String</type>
+    <value>reset</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="beatsPerCycle">
+    <type>int</type>
+    <value>1</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="dataBitsPerSymbol">
+    <type>int</type>
+    <value>8</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="emptyWithinPacket">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="errorDescriptor">
+    <type>[Ljava.lang.String;</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="firstSymbolInHighOrderBits">
+    <type>boolean</type>
+    <value>true</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="highOrderSymbolAtMSB">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="maxChannel">
+    <type>int</type>
+    <value>0</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="packetDescription">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="readyLatency">
+    <type>int</type>
+    <value>0</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="symbolsPerBeat">
+    <type>int</type>
+    <value>1</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>avalon_streaming</type>
+   <isStart>true</isStart>
+   <port>
+    <name>avalon_right_source_valid</name>
     <direction>Output</direction>
     <width>1</width>
     <role>valid</role>
    </port>
+   <port>
+    <name>avalon_right_source_ready</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>ready</role>
+   </port>
+   <port>
+    <name>avalon_right_source_data</name>
+    <direction>Output</direction>
+    <width>24</width>
+    <role>data</role>
+   </port>
   </interface>
-  <interface name="switch" kind="conduit_end" version="17.1">
+  <interface name="switch" kind="conduit_end" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -5125,7 +5125,7 @@ parameters are a RESULT of the module parameters. -->
  <module
    name="noise_effect_0"
    kind="noise_effect"
-   version="1.0"
+   version="1.1"
    path="noise_effect_0">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
@@ -5145,7 +5145,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="clock" kind="clock_sink" version="17.1">
+  <interface name="clock" kind="clock_sink" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -5190,7 +5190,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="reset" kind="reset_sink" version="17.1">
+  <interface name="reset" kind="reset_sink" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -5235,7 +5235,147 @@ parameters are a RESULT of the module parameters. -->
     <role>reset</role>
    </port>
   </interface>
-  <interface name="avalon_left_sink" kind="avalon_streaming_sink" version="17.1">
+  <interface
+     name="avalon_left_source"
+     kind="avalon_streaming_source"
+     version="17.0">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value>clock</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedReset">
+    <type>java.lang.String</type>
+    <value>reset</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="beatsPerCycle">
+    <type>int</type>
+    <value>1</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="dataBitsPerSymbol">
+    <type>int</type>
+    <value>8</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="emptyWithinPacket">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="errorDescriptor">
+    <type>[Ljava.lang.String;</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="firstSymbolInHighOrderBits">
+    <type>boolean</type>
+    <value>true</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="highOrderSymbolAtMSB">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="maxChannel">
+    <type>int</type>
+    <value>0</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="packetDescription">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="readyLatency">
+    <type>int</type>
+    <value>0</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="symbolsPerBeat">
+    <type>int</type>
+    <value>1</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>avalon_streaming</type>
+   <isStart>true</isStart>
+   <port>
+    <name>avalon_left_source_ready</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>ready</role>
+   </port>
+   <port>
+    <name>avalon_left_source_valid</name>
+    <direction>Output</direction>
+    <width>1</width>
+    <role>valid</role>
+   </port>
+   <port>
+    <name>avalon_left_source_data</name>
+    <direction>Output</direction>
+    <width>24</width>
+    <role>data</role>
+   </port>
+  </interface>
+  <interface name="avalon_left_sink" kind="avalon_streaming_sink" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -5354,10 +5494,10 @@ parameters are a RESULT of the module parameters. -->
    <type>avalon_streaming</type>
    <isStart>false</isStart>
    <port>
-    <name>avalon_left_sink_data</name>
+    <name>avalon_left_sink_valid</name>
     <direction>Input</direction>
-    <width>24</width>
-    <role>data</role>
+    <width>1</width>
+    <role>valid</role>
    </port>
    <port>
     <name>avalon_left_sink_ready</name>
@@ -5366,13 +5506,13 @@ parameters are a RESULT of the module parameters. -->
     <role>ready</role>
    </port>
    <port>
-    <name>avalon_left_sink_valid</name>
+    <name>avalon_left_sink_data</name>
     <direction>Input</direction>
-    <width>1</width>
-    <role>valid</role>
+    <width>24</width>
+    <role>data</role>
    </port>
   </interface>
-  <interface name="avalon_right_sink" kind="avalon_streaming_sink" version="17.1">
+  <interface name="avalon_right_sink" kind="avalon_streaming_sink" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -5497,22 +5637,22 @@ parameters are a RESULT of the module parameters. -->
     <role>data</role>
    </port>
    <port>
-    <name>avalon_right_sink_ready</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>ready</role>
-   </port>
-   <port>
     <name>avalon_right_sink_valid</name>
     <direction>Input</direction>
     <width>1</width>
     <role>valid</role>
    </port>
+   <port>
+    <name>avalon_right_sink_ready</name>
+    <direction>Output</direction>
+    <width>1</width>
+    <role>ready</role>
+   </port>
   </interface>
   <interface
      name="avalon_right_source"
      kind="avalon_streaming_source"
-     version="17.1">
+     version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -5630,12 +5770,6 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <type>avalon_streaming</type>
    <isStart>true</isStart>
-   <port>
-    <name>avalon_right_source_data</name>
-    <direction>Output</direction>
-    <width>24</width>
-    <role>data</role>
-   </port>
    <port>
     <name>avalon_right_source_ready</name>
     <direction>Input</direction>
@@ -5648,148 +5782,14 @@ parameters are a RESULT of the module parameters. -->
     <width>1</width>
     <role>valid</role>
    </port>
-  </interface>
-  <interface
-     name="avalon_left_source"
-     kind="avalon_streaming_source"
-     version="17.1">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <parameter name="associatedClock">
-    <type>java.lang.String</type>
-    <value>clock</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="associatedReset">
-    <type>java.lang.String</type>
-    <value>reset</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="beatsPerCycle">
-    <type>int</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="dataBitsPerSymbol">
-    <type>int</type>
-    <value>8</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="emptyWithinPacket">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="errorDescriptor">
-    <type>[Ljava.lang.String;</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="firstSymbolInHighOrderBits">
-    <type>boolean</type>
-    <value>true</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="highOrderSymbolAtMSB">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="maxChannel">
-    <type>int</type>
-    <value>0</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="packetDescription">
-    <type>java.lang.String</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="readyLatency">
-    <type>int</type>
-    <value>0</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="symbolsPerBeat">
-    <type>int</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>avalon_streaming</type>
-   <isStart>true</isStart>
    <port>
-    <name>avalon_left_source_data</name>
+    <name>avalon_right_source_data</name>
     <direction>Output</direction>
     <width>24</width>
     <role>data</role>
    </port>
-   <port>
-    <name>avalon_left_source_ready</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>ready</role>
-   </port>
-   <port>
-    <name>avalon_left_source_valid</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>valid</role>
-   </port>
   </interface>
-  <interface name="switch" kind="conduit_end" version="17.1">
+  <interface name="switch" kind="conduit_end" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -5838,7 +5838,7 @@ parameters are a RESULT of the module parameters. -->
  <module
    name="mm_interconnect_0"
    kind="altera_mm_interconnect"
-   version="17.1"
+   version="17.0"
    path="mm_interconnect_0">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
@@ -5902,7 +5902,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="clk_0_clk" kind="clock_sink" version="17.1">
+  <interface name="clk_0_clk" kind="clock_sink" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -5950,7 +5950,7 @@ parameters are a RESULT of the module parameters. -->
   <interface
      name="audio_and_video_config_0_reset_reset_bridge_in_reset"
      kind="reset_sink"
-     version="17.1">
+     version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -5998,7 +5998,7 @@ parameters are a RESULT of the module parameters. -->
   <interface
      name="master_0_clk_reset_reset_bridge_in_reset"
      kind="reset_sink"
-     version="17.1">
+     version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -6043,7 +6043,7 @@ parameters are a RESULT of the module parameters. -->
     <role>reset</role>
    </port>
   </interface>
-  <interface name="master_0_master" kind="avalon_slave" version="17.1">
+  <interface name="master_0_master" kind="avalon_slave" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -6433,7 +6433,7 @@ parameters are a RESULT of the module parameters. -->
   <interface
      name="audio_and_video_config_0_avalon_av_config_slave"
      kind="avalon_master"
-     version="17.1">
+     version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -6750,7 +6750,7 @@ parameters are a RESULT of the module parameters. -->
  <module
    name="rst_controller"
    kind="altera_reset_controller"
-   version="17.1"
+   version="17.0"
    path="rst_controller">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
@@ -6970,7 +6970,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="reset_in0" kind="reset_sink" version="17.1">
+  <interface name="reset_in0" kind="reset_sink" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -7015,7 +7015,7 @@ parameters are a RESULT of the module parameters. -->
     <role>reset</role>
    </port>
   </interface>
-  <interface name="clk" kind="clock_sink" version="17.1">
+  <interface name="clk" kind="clock_sink" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -7060,7 +7060,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="reset_out" kind="reset_source" version="17.1">
+  <interface name="reset_out" kind="reset_source" version="17.0">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -7125,7 +7125,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="audio_0.avalon_left_channel_source/moving_average_filter_0.avalon_left_sink"
    kind="avalon_streaming"
-   version="17.1"
+   version="17.0"
    start="audio_0.avalon_left_channel_source"
    end="moving_average_filter_0.avalon_left_sink">
   <parameter name="deviceFamily">
@@ -7152,7 +7152,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="audio_amplifier_0.avalon_left_source/audio_0.avalon_left_channel_sink"
    kind="avalon_streaming"
-   version="17.1"
+   version="17.0"
    start="audio_amplifier_0.avalon_left_source"
    end="audio_0.avalon_left_channel_sink">
   <parameter name="deviceFamily">
@@ -7179,7 +7179,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="moving_average_filter_0.avalon_left_source/delay_effect_0.avalon_left_sink"
    kind="avalon_streaming"
-   version="17.1"
+   version="17.0"
    start="moving_average_filter_0.avalon_left_source"
    end="delay_effect_0.avalon_left_sink">
   <parameter name="deviceFamily">
@@ -7206,7 +7206,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="delay_effect_0.avalon_left_source/noise_effect_0.avalon_left_sink"
    kind="avalon_streaming"
-   version="17.1"
+   version="17.0"
    start="delay_effect_0.avalon_left_source"
    end="noise_effect_0.avalon_left_sink">
   <parameter name="deviceFamily">
@@ -7233,7 +7233,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="noise_effect_0.avalon_left_source/audio_amplifier_0.avalon_left_sink"
    kind="avalon_streaming"
-   version="17.1"
+   version="17.0"
    start="noise_effect_0.avalon_left_source"
    end="audio_amplifier_0.avalon_left_sink">
   <parameter name="deviceFamily">
@@ -7260,7 +7260,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="audio_0.avalon_right_channel_source/moving_average_filter_0.avalon_right_sink"
    kind="avalon_streaming"
-   version="17.1"
+   version="17.0"
    start="audio_0.avalon_right_channel_source"
    end="moving_average_filter_0.avalon_right_sink">
   <parameter name="deviceFamily">
@@ -7287,7 +7287,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="audio_amplifier_0.avalon_right_source/audio_0.avalon_right_channel_sink"
    kind="avalon_streaming"
-   version="17.1"
+   version="17.0"
    start="audio_amplifier_0.avalon_right_source"
    end="audio_0.avalon_right_channel_sink">
   <parameter name="deviceFamily">
@@ -7314,7 +7314,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="moving_average_filter_0.avalon_right_source/delay_effect_0.avalon_right_sink"
    kind="avalon_streaming"
-   version="17.1"
+   version="17.0"
    start="moving_average_filter_0.avalon_right_source"
    end="delay_effect_0.avalon_right_sink">
   <parameter name="deviceFamily">
@@ -7341,7 +7341,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="delay_effect_0.avalon_right_source/noise_effect_0.avalon_right_sink"
    kind="avalon_streaming"
-   version="17.1"
+   version="17.0"
    start="delay_effect_0.avalon_right_source"
    end="noise_effect_0.avalon_right_sink">
   <parameter name="deviceFamily">
@@ -7368,7 +7368,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="noise_effect_0.avalon_right_source/audio_amplifier_0.avalon_right_sink"
    kind="avalon_streaming"
-   version="17.1"
+   version="17.0"
    start="noise_effect_0.avalon_right_source"
    end="audio_amplifier_0.avalon_right_sink">
   <parameter name="deviceFamily">
@@ -7395,7 +7395,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk/master_0.clk"
    kind="clock"
-   version="17.1"
+   version="17.0"
    start="clk_0.clk"
    end="master_0.clk">
   <parameter name="deviceFamily">
@@ -7422,7 +7422,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk/audio_and_video_config_0.clk"
    kind="clock"
-   version="17.1"
+   version="17.0"
    start="clk_0.clk"
    end="audio_and_video_config_0.clk">
   <parameter name="deviceFamily">
@@ -7449,7 +7449,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk/audio_0.clk"
    kind="clock"
-   version="17.1"
+   version="17.0"
    start="clk_0.clk"
    end="audio_0.clk">
   <parameter name="deviceFamily">
@@ -7476,7 +7476,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk/audio_amplifier_0.clock"
    kind="clock"
-   version="17.1"
+   version="17.0"
    start="clk_0.clk"
    end="audio_amplifier_0.clock">
   <parameter name="deviceFamily">
@@ -7503,7 +7503,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk/moving_average_filter_0.clock"
    kind="clock"
-   version="17.1"
+   version="17.0"
    start="clk_0.clk"
    end="moving_average_filter_0.clock">
   <parameter name="deviceFamily">
@@ -7530,7 +7530,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk/delay_effect_0.clock"
    kind="clock"
-   version="17.1"
+   version="17.0"
    start="clk_0.clk"
    end="delay_effect_0.clock">
   <parameter name="deviceFamily">
@@ -7557,7 +7557,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk/noise_effect_0.clock"
    kind="clock"
-   version="17.1"
+   version="17.0"
    start="clk_0.clk"
    end="noise_effect_0.clock">
   <parameter name="deviceFamily">
@@ -7584,7 +7584,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk/audio_pll_0.ref_clk"
    kind="clock"
-   version="17.1"
+   version="17.0"
    start="clk_0.clk"
    end="audio_pll_0.ref_clk">
   <parameter name="deviceFamily">
@@ -7611,7 +7611,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk_reset/master_0.clk_reset"
    kind="reset"
-   version="17.1"
+   version="17.0"
    start="clk_0.clk_reset"
    end="master_0.clk_reset">
   <parameter name="deviceFamily">
@@ -7638,7 +7638,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk_reset/audio_pll_0.ref_reset"
    kind="reset"
-   version="17.1"
+   version="17.0"
    start="clk_0.clk_reset"
    end="audio_pll_0.ref_reset">
   <parameter name="deviceFamily">
@@ -7665,7 +7665,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="master_0.master/mm_interconnect_0.master_0_master"
    kind="avalon"
-   version="17.1"
+   version="17.0"
    start="master_0.master"
    end="mm_interconnect_0.master_0_master">
   <parameter name="arbitrationPriority">
@@ -7716,7 +7716,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk/mm_interconnect_0.clk_0_clk"
    kind="clock"
-   version="17.1"
+   version="17.0"
    start="clk_0.clk"
    end="mm_interconnect_0.clk_0_clk">
   <parameter name="deviceFamily">
@@ -7743,7 +7743,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="mm_interconnect_0.audio_and_video_config_0_avalon_av_config_slave/audio_and_video_config_0.avalon_av_config_slave"
    kind="avalon"
-   version="17.1"
+   version="17.0"
    start="mm_interconnect_0.audio_and_video_config_0_avalon_av_config_slave"
    end="audio_and_video_config_0.avalon_av_config_slave">
   <parameter name="arbitrationPriority">
@@ -7794,7 +7794,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_controller.reset_out/audio_0.reset"
    kind="reset"
-   version="17.1"
+   version="17.0"
    start="rst_controller.reset_out"
    end="audio_0.reset">
   <parameter name="deviceFamily">
@@ -7821,7 +7821,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_controller.reset_out/audio_amplifier_0.reset"
    kind="reset"
-   version="17.1"
+   version="17.0"
    start="rst_controller.reset_out"
    end="audio_amplifier_0.reset">
   <parameter name="deviceFamily">
@@ -7848,7 +7848,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_controller.reset_out/audio_and_video_config_0.reset"
    kind="reset"
-   version="17.1"
+   version="17.0"
    start="rst_controller.reset_out"
    end="audio_and_video_config_0.reset">
   <parameter name="deviceFamily">
@@ -7875,7 +7875,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_controller.reset_out/delay_effect_0.reset"
    kind="reset"
-   version="17.1"
+   version="17.0"
    start="rst_controller.reset_out"
    end="delay_effect_0.reset">
   <parameter name="deviceFamily">
@@ -7902,7 +7902,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_controller.reset_out/moving_average_filter_0.reset"
    kind="reset"
-   version="17.1"
+   version="17.0"
    start="rst_controller.reset_out"
    end="moving_average_filter_0.reset">
   <parameter name="deviceFamily">
@@ -7929,7 +7929,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_controller.reset_out/noise_effect_0.reset"
    kind="reset"
-   version="17.1"
+   version="17.0"
    start="rst_controller.reset_out"
    end="noise_effect_0.reset">
   <parameter name="deviceFamily">
@@ -7956,7 +7956,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_controller.reset_out/mm_interconnect_0.audio_and_video_config_0_reset_reset_bridge_in_reset"
    kind="reset"
-   version="17.1"
+   version="17.0"
    start="rst_controller.reset_out"
    end="mm_interconnect_0.audio_and_video_config_0_reset_reset_bridge_in_reset">
   <parameter name="deviceFamily">
@@ -7983,7 +7983,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_controller.reset_out/mm_interconnect_0.master_0_clk_reset_reset_bridge_in_reset"
    kind="reset"
-   version="17.1"
+   version="17.0"
    start="rst_controller.reset_out"
    end="mm_interconnect_0.master_0_clk_reset_reset_bridge_in_reset">
   <parameter name="deviceFamily">
@@ -8010,7 +8010,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk_reset/rst_controller.reset_in0"
    kind="reset"
-   version="17.1"
+   version="17.0"
    start="clk_0.clk_reset"
    end="rst_controller.reset_in0">
   <parameter name="deviceFamily">
@@ -8037,7 +8037,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk/rst_controller.clk"
    kind="clock"
-   version="17.1"
+   version="17.0"
    start="clk_0.clk"
    end="rst_controller.clk">
   <parameter name="deviceFamily">
@@ -8067,7 +8067,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
   <displayName>Audio</displayName>
-  <version>17.1</version>
+  <version>17.0</version>
  </plugin>
  <plugin>
   <instanceCount>10</instanceCount>
@@ -8075,7 +8075,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Clock Input</displayName>
-  <version>17.1</version>
+  <version>17.0</version>
  </plugin>
  <plugin>
   <instanceCount>11</instanceCount>
@@ -8083,7 +8083,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Reset Input</displayName>
-  <version>17.1</version>
+  <version>17.0</version>
  </plugin>
  <plugin>
   <instanceCount>10</instanceCount>
@@ -8091,7 +8091,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Avalon Streaming Source</displayName>
-  <version>17.1</version>
+  <version>17.0</version>
  </plugin>
  <plugin>
   <instanceCount>10</instanceCount>
@@ -8099,7 +8099,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Avalon Streaming Sink</displayName>
-  <version>17.1</version>
+  <version>17.0</version>
  </plugin>
  <plugin>
   <instanceCount>8</instanceCount>
@@ -8107,7 +8107,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Conduit</displayName>
-  <version>17.1</version>
+  <version>17.0</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -8115,7 +8115,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
   <displayName>audio_amplifier</displayName>
-  <version>1.0</version>
+  <version>1.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -8123,7 +8123,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
   <displayName>Audio and Video Config</displayName>
-  <version>17.1</version>
+  <version>17.0</version>
  </plugin>
  <plugin>
   <instanceCount>2</instanceCount>
@@ -8131,7 +8131,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Avalon Memory Mapped Slave</displayName>
-  <version>17.1</version>
+  <version>17.0</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -8139,7 +8139,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
   <displayName>Audio Clock for DE-series Boards</displayName>
-  <version>17.1</version>
+  <version>17.0</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -8147,7 +8147,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Clock Output</displayName>
-  <version>17.1</version>
+  <version>17.0</version>
  </plugin>
  <plugin>
   <instanceCount>3</instanceCount>
@@ -8155,7 +8155,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Reset Output</displayName>
-  <version>17.1</version>
+  <version>17.0</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -8163,7 +8163,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
   <displayName>Clock Source</displayName>
-  <version>17.1</version>
+  <version>17.0</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -8171,7 +8171,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Clock Input</displayName>
-  <version>17.1</version>
+  <version>17.0</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -8179,7 +8179,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Reset Input</displayName>
-  <version>17.1</version>
+  <version>17.0</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -8187,7 +8187,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Clock Output</displayName>
-  <version>17.1</version>
+  <version>17.0</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -8195,7 +8195,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Reset Output</displayName>
-  <version>17.1</version>
+  <version>17.0</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -8203,7 +8203,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
   <displayName>delay_effect</displayName>
-  <version>1.0</version>
+  <version>1.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -8211,7 +8211,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
   <displayName>JTAG to Avalon Master Bridge</displayName>
-  <version>17.1</version>
+  <version>17.0</version>
  </plugin>
  <plugin>
   <instanceCount>2</instanceCount>
@@ -8219,7 +8219,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Avalon Memory Mapped Master</displayName>
-  <version>17.1</version>
+  <version>17.0</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -8227,7 +8227,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
   <displayName>moving_average_filter</displayName>
-  <version>1.0</version>
+  <version>1.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -8235,7 +8235,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
   <displayName>noise_effect</displayName>
-  <version>1.0</version>
+  <version>1.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -8243,7 +8243,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
   <displayName>MM Interconnect</displayName>
-  <version>17.1</version>
+  <version>17.0</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -8251,7 +8251,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
   <displayName>Merlin Reset Controller</displayName>
-  <version>17.1</version>
+  <version>17.0</version>
  </plugin>
  <plugin>
   <instanceCount>10</instanceCount>
@@ -8259,7 +8259,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>
   <displayName>Avalon Streaming Connection</displayName>
-  <version>17.1</version>
+  <version>17.0</version>
  </plugin>
  <plugin>
   <instanceCount>8</instanceCount>
@@ -8267,7 +8267,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>
   <displayName>Clock Connection</displayName>
-  <version>17.1</version>
+  <version>17.0</version>
  </plugin>
  <plugin>
   <instanceCount>2</instanceCount>
@@ -8275,7 +8275,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>
   <displayName>Reset Connection</displayName>
-  <version>17.1</version>
+  <version>17.0</version>
  </plugin>
  <plugin>
   <instanceCount>2</instanceCount>
@@ -8283,7 +8283,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>
   <displayName>Avalon Memory Mapped Connection</displayName>
-  <version>17.1</version>
+  <version>17.0</version>
  </plugin>
  <plugin>
   <instanceCount>2</instanceCount>
@@ -8291,7 +8291,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>
   <displayName>Clock Connection</displayName>
-  <version>17.1</version>
+  <version>17.0</version>
  </plugin>
  <plugin>
   <instanceCount>9</instanceCount>
@@ -8299,8 +8299,8 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>
   <displayName>Reset Connection</displayName>
-  <version>17.1</version>
+  <version>17.0</version>
  </plugin>
- <reportVersion>17.1 590</reportVersion>
- <uniqueIdentifier>A41F7291F98100000161415D7286</uniqueIdentifier>
+ <reportVersion>17.0 595</reportVersion>
+ <uniqueIdentifier>00241DDE4AD1000001663ECCB025</uniqueIdentifier>
 </EnsembleReport>

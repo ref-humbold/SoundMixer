@@ -28,13 +28,13 @@ module move_avg(output reg[23:0] out_data, output reg out_valid, input[23:0] in_
 		end
 		else
 		begin
-			out_data <= $signed(in_data);
+			out_data <= $signed(conn[0]);
 			out_valid <= 1'b1;
 		end
 	end
 	else
 	begin
-		out_data <= 0;
+		out_data <= $signed(in_data);
 		out_valid <= 1'b0;
 	end
 endmodule

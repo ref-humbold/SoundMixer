@@ -193,62 +193,6 @@
          type = "String";
       }
    }
-   element mixer
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
-   element mixer
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
-   element mixer
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
-   element mixer
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
-   element mixer
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
-   element mixer
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
-   element mixer
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
    element moving_average_filter_0
    {
       datum _sortIndex
@@ -304,37 +248,13 @@
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
  <interface name="gain_hex" internal="audio_amplifier_0.gain_hex" />
  <interface name="gain_key" internal="audio_amplifier_0.gain_key" />
- <interface
-   name="hex_amplif"
-   internal="audio_amplifier_0.hex"
-   type="conduit"
-   dir="end" />
- <interface
-   name="key_amplif"
-   internal="audio_amplifier_0.key"
-   type="conduit"
-   dir="end" />
- <interface
-   name="led_amplif"
-   internal="audio_amplifier_0.led"
-   type="conduit"
-   dir="end" />
+ <interface name="hex_amplif" internal="audio_amplifier_0.hex" />
+ <interface name="key_amplif" internal="audio_amplifier_0.key" />
+ <interface name="led_amplif" internal="audio_amplifier_0.led" />
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
- <interface
-   name="switch_avg"
-   internal="moving_average_filter_0.switch"
-   type="conduit"
-   dir="end" />
- <interface
-   name="switch_delay"
-   internal="delay_effect_0.switch"
-   type="conduit"
-   dir="end" />
- <interface
-   name="switch_noise"
-   internal="noise_effect_0.switch"
-   type="conduit"
-   dir="end" />
+ <interface name="switch_avg" internal="moving_average_filter_0.switch" />
+ <interface name="switch_delay" internal="delay_effect_0.switch" />
+ <interface name="switch_noise" internal="noise_effect_0.switch" />
  <module
    name="audio_0"
    kind="altera_up_avalon_audio"
@@ -350,7 +270,7 @@
  <module
    name="audio_amplifier_0"
    kind="audio_amplifier"
-   version="1.1"
+   version="1.0"
    enabled="1" />
  <module
    name="audio_and_video_config_0"
@@ -391,7 +311,7 @@
   <parameter name="inputClockFrequency" value="0" />
   <parameter name="resetSynchronousEdges" value="NONE" />
  </module>
- <module name="delay_effect_0" kind="delay_effect" version="1.1" enabled="1" />
+ <module name="delay_effect_0" kind="delay_effect" version="1.0" enabled="1" />
  <module
    name="master_0"
    kind="altera_jtag_avalon_master"
@@ -409,9 +329,9 @@
  <module
    name="moving_average_filter_0"
    kind="moving_average_filter"
-   version="1.1"
+   version="1.0"
    enabled="1" />
- <module name="noise_effect_0" kind="noise_effect" version="1.1" enabled="1" />
+ <module name="noise_effect_0" kind="noise_effect" version="1.0" enabled="1" />
  <connection
    kind="avalon"
    version="17.0"

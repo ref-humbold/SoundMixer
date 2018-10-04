@@ -12,19 +12,19 @@
 module moving_average_filter (
 		input  wire        clock_clk,                 //               clock.clk
 		input  wire        reset_reset,               //               reset.reset
-		input  wire [23:0] avalon_left_sink_data,     //    avalon_left_sink.data
+		input  wire        avalon_left_sink_valid,    //    avalon_left_sink.valid
 		output wire        avalon_left_sink_ready,    //                    .ready
-		input  wire        avalon_left_sink_valid,    //                    .valid
-		input  wire [23:0] avalon_right_sink_data,    //   avalon_right_sink.data
+		input  wire [23:0] avalon_left_sink_data,     //                    .data
+		input  wire        avalon_right_sink_valid,   //   avalon_right_sink.valid
 		output wire        avalon_right_sink_ready,   //                    .ready
-		input  wire        avalon_right_sink_valid,   //                    .valid
-		output wire [23:0] avalon_right_source_data,  // avalon_right_source.data
-		input  wire        avalon_right_source_ready, //                    .ready
-		output wire        avalon_right_source_valid, //                    .valid
-		output wire [23:0] avalon_left_source_data,   //  avalon_left_source.data
+		input  wire [23:0] avalon_right_sink_data,    //                    .data
+		output wire        avalon_left_source_valid,  //  avalon_left_source.valid
 		input  wire        avalon_left_source_ready,  //                    .ready
-		output wire        avalon_left_source_valid,  //                    .valid
-		input  wire        switch_signal              //              switch.switch_signal
+		output wire [23:0] avalon_left_source_data,   //                    .data
+		output wire        avalon_right_source_valid, // avalon_right_source.valid
+		input  wire        avalon_right_source_ready, //                    .ready
+		output wire [23:0] avalon_right_source_data,  //                    .data
+		input  wire        switch_signal              //              switch.new_signal
 	);
 
 	assign avalon_left_sink_ready = avalon_left_source_ready;
