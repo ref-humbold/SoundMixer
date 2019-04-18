@@ -304,41 +304,17 @@
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
  <interface name="gain_hex" internal="audio_amplifier_0.gain_hex" />
  <interface name="gain_key" internal="audio_amplifier_0.gain_key" />
- <interface
-   name="hex_amplif"
-   internal="audio_amplifier_0.hex"
-   type="conduit"
-   dir="end" />
- <interface
-   name="key_amplif"
-   internal="audio_amplifier_0.key"
-   type="conduit"
-   dir="end" />
- <interface
-   name="led_amplif"
-   internal="audio_amplifier_0.led"
-   type="conduit"
-   dir="end" />
+ <interface name="hex_amplif" internal="audio_amplifier_0.hex" />
+ <interface name="key_amplif" internal="audio_amplifier_0.key" />
+ <interface name="led_amplif" internal="audio_amplifier_0.led" />
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
- <interface
-   name="switch_avg"
-   internal="moving_average_filter_0.switch"
-   type="conduit"
-   dir="end" />
- <interface
-   name="switch_delay"
-   internal="delay_effect_0.switch"
-   type="conduit"
-   dir="end" />
- <interface
-   name="switch_noise"
-   internal="noise_effect_0.switch"
-   type="conduit"
-   dir="end" />
+ <interface name="switch_avg" internal="moving_average_filter_0.switch" />
+ <interface name="switch_delay" internal="delay_effect_0.switch" />
+ <interface name="switch_noise" internal="noise_effect_0.switch" />
  <module
    name="audio_0"
    kind="altera_up_avalon_audio"
-   version="17.0"
+   version="18.0"
    enabled="1">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
@@ -355,7 +331,7 @@
  <module
    name="audio_and_video_config_0"
    kind="altera_up_avalon_audio_and_video_config"
-   version="17.0"
+   version="18.0"
    enabled="1">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
@@ -377,7 +353,7 @@
  <module
    name="audio_pll_0"
    kind="altera_up_avalon_audio_pll"
-   version="17.0"
+   version="18.0"
    enabled="1">
   <parameter name="AUTO_DEVICE" value="5CSEMA5F31C6" />
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
@@ -385,7 +361,7 @@
   <parameter name="device_family" value="Cyclone V" />
   <parameter name="gui_refclk" value="50.0" />
  </module>
- <module name="clk_0" kind="clock_source" version="17.0" enabled="1">
+ <module name="clk_0" kind="clock_source" version="18.1" enabled="1">
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="clockFrequencyKnown" value="true" />
   <parameter name="inputClockFrequency" value="0" />
@@ -395,7 +371,7 @@
  <module
    name="master_0"
    kind="altera_jtag_avalon_master"
-   version="17.0"
+   version="18.1"
    enabled="1">
   <parameter name="AUTO_DEVICE" value="5CSEMA5F31C6" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
@@ -414,7 +390,7 @@
  <module name="noise_effect_0" kind="noise_effect" version="1.1" enabled="1" />
  <connection
    kind="avalon"
-   version="17.0"
+   version="18.1"
    start="master_0.master"
    end="audio_and_video_config_0.avalon_av_config_slave">
   <parameter name="arbitrationPriority" value="1" />
@@ -423,124 +399,124 @@
  </connection>
  <connection
    kind="avalon_streaming"
-   version="17.0"
+   version="18.1"
    start="audio_0.avalon_left_channel_source"
    end="moving_average_filter_0.avalon_left_sink" />
  <connection
    kind="avalon_streaming"
-   version="17.0"
+   version="18.1"
    start="audio_amplifier_0.avalon_left_source"
    end="audio_0.avalon_left_channel_sink" />
  <connection
    kind="avalon_streaming"
-   version="17.0"
+   version="18.1"
    start="moving_average_filter_0.avalon_left_source"
    end="delay_effect_0.avalon_left_sink" />
  <connection
    kind="avalon_streaming"
-   version="17.0"
+   version="18.1"
    start="delay_effect_0.avalon_left_source"
    end="noise_effect_0.avalon_left_sink" />
  <connection
    kind="avalon_streaming"
-   version="17.0"
+   version="18.1"
    start="noise_effect_0.avalon_left_source"
    end="audio_amplifier_0.avalon_left_sink" />
  <connection
    kind="avalon_streaming"
-   version="17.0"
+   version="18.1"
    start="audio_0.avalon_right_channel_source"
    end="moving_average_filter_0.avalon_right_sink" />
  <connection
    kind="avalon_streaming"
-   version="17.0"
+   version="18.1"
    start="audio_amplifier_0.avalon_right_source"
    end="audio_0.avalon_right_channel_sink" />
  <connection
    kind="avalon_streaming"
-   version="17.0"
+   version="18.1"
    start="moving_average_filter_0.avalon_right_source"
    end="delay_effect_0.avalon_right_sink" />
  <connection
    kind="avalon_streaming"
-   version="17.0"
+   version="18.1"
    start="delay_effect_0.avalon_right_source"
    end="noise_effect_0.avalon_right_sink" />
  <connection
    kind="avalon_streaming"
-   version="17.0"
+   version="18.1"
    start="noise_effect_0.avalon_right_source"
    end="audio_amplifier_0.avalon_right_sink" />
- <connection kind="clock" version="17.0" start="clk_0.clk" end="master_0.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="master_0.clk" />
  <connection
    kind="clock"
-   version="17.0"
+   version="18.1"
    start="clk_0.clk"
    end="audio_and_video_config_0.clk" />
- <connection kind="clock" version="17.0" start="clk_0.clk" end="audio_0.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="audio_0.clk" />
  <connection
    kind="clock"
-   version="17.0"
+   version="18.1"
    start="clk_0.clk"
    end="audio_amplifier_0.clock" />
  <connection
    kind="clock"
-   version="17.0"
+   version="18.1"
    start="clk_0.clk"
    end="moving_average_filter_0.clock" />
  <connection
    kind="clock"
-   version="17.0"
+   version="18.1"
    start="clk_0.clk"
    end="delay_effect_0.clock" />
  <connection
    kind="clock"
-   version="17.0"
+   version="18.1"
    start="clk_0.clk"
    end="noise_effect_0.clock" />
  <connection
    kind="clock"
-   version="17.0"
+   version="18.1"
    start="clk_0.clk"
    end="audio_pll_0.ref_clk" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.1"
    start="clk_0.clk_reset"
    end="master_0.clk_reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.1"
    start="clk_0.clk_reset"
    end="audio_pll_0.ref_reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.1"
    start="clk_0.clk_reset"
    end="audio_and_video_config_0.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.1"
    start="clk_0.clk_reset"
    end="audio_0.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.1"
    start="clk_0.clk_reset"
    end="audio_amplifier_0.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.1"
    start="clk_0.clk_reset"
    end="moving_average_filter_0.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.1"
    start="clk_0.clk_reset"
    end="delay_effect_0.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.1"
    start="clk_0.clk_reset"
    end="noise_effect_0.reset" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />

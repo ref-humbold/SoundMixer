@@ -1,4 +1,4 @@
-# Quartus 17.0
+# Quartus Prime Lite
 .qsys_edit
 db
 greybox_tmp
@@ -34,3 +34,4 @@ timing
 *.txt
 *example*
 *sopc_*
+*.BAK.*

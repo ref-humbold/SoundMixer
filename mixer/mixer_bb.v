@@ -9,13 +9,7 @@ module mixer (
 	audio_external_DACLRCK,
 	audio_pll_clk_clk,
 	clk_clk,
-	hex_amplif_new_signal,
-	key_amplif_new_signal,
-	led_amplif_new_signal,
-	reset_reset_n,
-	switch_avg_new_signal,
-	switch_delay_new_signal,
-	switch_noise_new_signal);	
+	reset_reset_n);	
 
 	inout		audio_config_extern_SDAT;
 	output		audio_config_extern_SCLK;
@@ -26,11 +20,5 @@ module mixer (
 	input		audio_external_DACLRCK;
 	output		audio_pll_clk_clk;
 	input		clk_clk;
-	output	[6:0]	hex_amplif_new_signal;
-	input	[1:0]	key_amplif_new_signal;
-	output	[9:0]	led_amplif_new_signal;
 	input		reset_reset_n;
-	input		switch_avg_new_signal;
-	input		switch_delay_new_signal;
-	input		switch_noise_new_signal;
 endmodule
