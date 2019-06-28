@@ -1,13 +1,13 @@
-# Quartus Prime Lite
-.qsys_edit
-db
-greybox_tmp
-incremental_db
-simulation
-testbench
-timing
-*_sim
-*~
+# [ Verilog ]
+# Quartus Prime
+.qsys_edit/
+*_sim/
+db/
+greybox_tmp/
+incremental_db/
+simulation/
+testbench/
+timing/
 *_generation_script*
 *_inst.vhd
 *.bak
@@ -32,6 +32,9 @@ timing
 *.summary
 *.tcl
 *.txt
+*~
 *example*
 *sopc_*
-*.BAK.*
+
+# generated PLL specification file
+PLLJ_PLLSPE_INFO.txt
