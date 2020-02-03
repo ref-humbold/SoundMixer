@@ -35,6 +35,7 @@ timing/
 *~
 *example*
 *sopc_*
+*.BAK*
 
 # generated PLL specification file
 PLLJ_PLLSPE_INFO.txt
